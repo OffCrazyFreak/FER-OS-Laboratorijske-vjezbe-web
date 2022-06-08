@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="hr-HR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="os.ico" />
+
+    <title>Operacijski sustavi - Upute za laboratorijske vježbe</title>
+
+    <link href="styles/normalize.css" rel="stylesheet" />
+    <link href="styles/fonts.css" rel="stylesheet" />
+    <link href="styles/index.css" rel="stylesheet" />
+    <link href="styles/scroll-bar.css" rel="stylesheet" />
+    <link href="styles/progress-bar.css" rel="stylesheet" />
+    <link href="styles/btt-btn.css" rel="stylesheet" />
+
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="progress-bar"></div>
+
+    <div class="backToTopBtn hidden">
+      <svg
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="black"
+          d="M240.971 130.524l194.343 194.343
+        c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667
+        c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516
+        c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667
+        c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525
+        c9.372-9.373 24.568-9.373 33.941-.001z"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="background-image"></div>
+
+    <h1>Operacijski sustavi</h1>
+    <h2>Laboratorijske vježbe</h2>
+
+    <section class="org-vjezbi-sec">
+      <hr />
+
+      <h3>Organizacija vježbi</h3>
+      <p>
+        Laboratorijske vježbe se akademske godine 2021./2022. demonstriraju
+        uživo u laboratorijima Fakulteta (A109 i A110), a samo u iznimnim
+        slučajevima online.
+      </p>
+      <p>
+        Laboratorijske vježbe mogu se predati isključivo tijekom semestra u
+        tjednima navedenim u tablici.
+      </p>
+
+      <div class="table-container">
+        <table class="termini-table" cellpadding="4">
+          <thead>
+            <tr>
+              <th rowspan="2">Tjedan</th>
+              <th rowspan="2">
+                Demonstrature<br />
+                (online - prijave e-mailom, uživo&nbsp;-&nbsp;nema prijave)
+              </th>
+              <th rowspan="2">
+                Termin predaje labosa u <strong>A109</strong> i
+                <strong>A110</strong><br />
+                (prijave putem sustava ferko)
+              </th>
+              <th colspan="4">Bodovanje (najveći mogući broj bodova)</th>
+            </tr>
+            <tr>
+              <th>Vježba 1</th>
+              <th>Vježba 2</th>
+              <th>Vježba 3</th>
+              <th>
+                Vježba 4<br />
+                <span class="accent">OPCIONALNO</span>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="td-center-text">
+                <span class="accent">14.03 - 03.06.</span>
+              </td>
+              <td class="td-center-text">
+                <span class="accent"
+                  >ONLINE - najava mailom na
+                  <a href="mailto:os-demosi@zemris.fer.hr"
+                    >os-demosi@zemris.fer.hr</a
+                  ></span
+                >
+              </td>
+
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+            </tr>
+
+            <tr>
+              <td class="td-center-text">21.03. - 25.03.</td>
+              <td class="td-center-text">četvrtak, 24.03.2022 10-11 u A110</td>
+              <td class="td-center-text">
+                četvrtak, 24.3.2022. 8-18<br />
+                petak, 25.3.2022. 8-15
+              </td>
+              <td class="td-center-text">4</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">28.03. - 01.04.</td>
+              <td class="td-center-text">četvrtak, 31.03.2022 10-11 u A110</td>
+              <td class="td-center-text">
+                četvrtak, 31.3.2022. 8-18<br />
+                petak, 1.4.2022. 8-15
+              </td>
+              <td class="td-center-text">4</td>
+              <td class="td-center-text">4</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">04.04. - 08.04.</td>
+              <td class="td-center-text">četvrtak, 07.04.2022 10-11 u A110</td>
+              <td class="td-center-text">
+                četvrtak, 7.4.2022. 8-18<br />
+                petak, 8.4.2022. 8-15
+              </td>
+              <td class="td-center-text">2</td>
+              <td class="td-center-text">4</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">11.04. - 15.04.</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">
+                četvrtak, 14.4.2022. 8-18<br />
+                petak, 15.4.2022. 8-15
+              </td>
+              <td class="td-center-text">0</td>
+              <td class="td-center-text">3</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+            </tr>
+            <tr>
+              <td class="td-divide-row"></td>
+              <td class="td-divide-row"></td>
+              <td class="td-divide-row"></td>
+              <td class="td-divide-row"></td>
+              <td class="td-divide-row"></td>
+              <td class="td-divide-row"></td>
+              <td class="td-divide-row"></td>
+            </tr>
+            <tr>
+              <td class="td-center-text">09.05. - 13.05.</td>
+              <td class="td-center-text">četvrtak, 12.05.2022 10-11 u A110</td>
+              <td class="td-center-text">
+                četvrtak, 12.5.2022. 8-18<br />
+                petak, 13.5.2022. 8-15
+              </td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">2</td>
+              <td class="td-center-text">8</td>
+              <td class="td-center-text">-</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">16.05. - 20.05.</td>
+              <td class="td-center-text">četvrtak, 19.05.2022 10-11 u A110</td>
+              <td class="td-center-text">
+                četvrtak, 19.5.2022. 8-18<br />
+                petak, 20.5.2022. 8-15
+              </td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">8</td>
+              <td class="td-center-text">-</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">23.05. - 27.05.</td>
+              <td class="td-center-text">četvrtak, 26.05.2022 10-11 u A110</td>
+              <td class="td-center-text">
+                četvrtak, 26.5.2022. 8-18<br />
+                petak, 27.5.2022. 8-15
+              </td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">6</td>
+              <td class="td-center-text"><span class="accent">6</span></td>
+            </tr>
+            <tr>
+              <td class="td-center-text">31.05. - 3.06.</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">
+                četvrtak, 2.6.2022. 8-18<br />
+                petak, 3.6.2022. 8-15
+              </td>
+              <td class="td-center-text">0</td>
+              <td class="td-center-text">0</td>
+              <td class="td-center-text">5</td>
+              <td class="td-center-text"><span class="accent">6</span></td>
+            </tr>
+            <tr>
+              <td class="td-center-text">06.06. - 10.06.</td>
+              <td class="td-center-text">-</td>
+              <td class="td-center-text">(NADOKNADA) četvrtak 9.6.2022.</td>
+              <td class="td-center-text">0</td>
+              <td class="td-center-text">0</td>
+              <td class="td-center-text">1</td>
+              <td class="td-center-text"><span class="accent">2</span></td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="3">Rok za upload (domaća zadaća za 2 boda)</td>
+              <td class="td-center-text">
+                <time datetime="2022-03-29 15:00">29.03.2022. do 15:00</time>
+              </td>
+              <td class="td-center-text">
+                <time datetime="2022-04-05 15:00">05.04.2022. do 15:00</time>
+              </td>
+              <td class="td-center-text">
+                <time datetime="2022-05-17 15:00">17.05.2022. do 15:00</time>
+              </td>
+              <td class="td-center-text">
+                <time datetime="2022-05-24 15:00">24.05.2022. do 15:00</time>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">Rok za upload (domaća zadaća za 1 bod)</td>
+              <td class="td-center-text">
+                <time datetime="2022-04-05 15:00">05.04.2022. do 15:00</time>
+              </td>
+              <td class="td-center-text">
+                <time datetime="2022-04-12 15:00">12.04.2022. do 15:00</time>
+              </td>
+              <td class="td-center-text">
+                <time datetime="2022-05-24 15:00">24.05.2022. do 15:00</time>
+              </td>
+              <td class="td-center-text">
+                <time datetime="2022-05-31 15:00">31.05.2022. do 15:00</time>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="postupak-za-vjezbe-sec">
+      <hr />
+
+      <h3>Postupak za vježbe</h3>
+
+      <ol>
+        <br />
+
+        <li>
+          Pročitati pripremu za vježbu i samostalno riješiti programske zadatke
+          (domaću zadaću).
+        </li>
+        <li>
+          Prijaviti termin u tjednu predaje vježbi putem sustava
+          <a target="_blank" href="https://ferko.fer.hr/ferko/">ferko</a>.
+        </li>
+        <li>
+          Programski kod arhiviran u <em>.zip</em> formatu prema
+          <a
+            target="_blank"
+            href="files/OS - Laboratorijska vježbe - Upute za upload.pdf"
+            >uputama</a
+          >
+          postaviti i zaključati na sustav
+          <a target="_blank" href="https://ferko.fer.hr/ferko/">ferko</a> do
+          utorka do 15 sati u tjednu prijavljenog termina.
+        </li>
+        <li>
+          U zakazanom terminu, asistentu demonstrirati rad programa te po
+          potrebi odgovoriti na pitanja.
+        </li>
+      </ol>
+
+      <h4>Prijava termina</h4>
+      <p>
+        Prijave započinju tjedan dana prije termina labosa, a završavaju
+        početkom odabranog termina ili kada se popune svi raspoloživi termini.
+      </p>
+      <p class="allert">
+        Svaki nedolazak na prijavljeni termin labosa kažnjava se
+        <strong>negativnim bodom</strong>.
+      </p>
+
+      <h4>Demonstracija rada</h4>
+      <p class="allert">
+        U nekom terminu je moguće demonstrirati rad
+        <strong>najviše dvije</strong> vježbe. U terminu nadoknade moguće je
+        demonstrirati rad <strong>najviše jedne</strong> vježbe.
+      </p>
+      <p>
+        <span class="allert">Vježbe se predaju po redu</span> (osim u iznimnim
+        slučajevima kada se zbog opravdanih razloga predaje zaostala vježba u
+        terminu nadoknade).
+      </p>
+
+      <h4>Domaća zadaća</h4>
+
+      <p>
+        Programski kod pisati prema
+        <a
+          target="_blank"
+          href="https://www.kernel.org/doc/html/v4.10/process/coding-style.html"
+        >
+          uputama</a
+        >
+        (posebice paziti na uvlačenje, razmake te prijelom dugih linija).
+        Primjeri korištenja stila prikazani su u kodovima
+
+        <em
+          ><a
+            href="http://www.zemris.fer.hr/predmeti/os/pripreme/upute/random_prime.c"
+            target="_blank"
+            >random_prime.c</a
+          ></em
+        >
+        i
+        <em
+          ><a
+            href="http://www.zemris.fer.hr/predmeti/os/pripreme/upute/sigaction.c"
+            target="_blank"
+            >sigaction.c</a
+          ></em
+        >. Neki od priloženih programa koriste neznatno modificirani stil (više
+        razmaka) koji je također prihvatljiv.
+      </p>
+
+      <br />
+      <p>
+        Sve datoteke koje sadrže izvorni programski kod koji čine jednu vježbu
+        (pa makar bila i samo jedna datoteka) staviti u
+        <em class="accent">.zip</em> arhivu.
+      </p>
+      <p>
+        <span class="allert"
+          >Sustav za detekciju plagijata <strong>ne prihvaća</strong> druge
+          arhive osim <em>.zip</em></span
+        >
+        (primjerice <em>.rar</em>, <em>.gz</em> i sl.)!
+      </p>
+      <p>
+        <strong class="allert">
+          Nikakve druge datoteke ili direktorije ne stavljati u arhivu
+        </strong>
+        (primjerice arhiva <strong>ne sadrži</strong> makefile)!
+      </p>
+      <p>
+        Odabrati pravu datoteku za upload je izazov i boduje se, odnosno upload
+        pogrešne datoteke u detekciji plagijata se kažnjava negativnim bodovima.
+      </p>
+      <p>
+        Učestale pogreške koje nose negativne bodove su: korištenje neke druge
+        arhive osim <em>.zip</em>, predaja vježbe na krivom mjestu, arhiva
+        sadrži poddirektorije ili izvršne datoteke.
+      </p>
+      <p class="allert">
+        Moguće je otključati vježbu koja je greškom predana i zaključana za
+        jedan negativan bod slanjem email-a sa zahtjevom na
+        <a href="mailto:os@zemris.fer.hr">os@zemris.fer.hr</a>!
+      </p>
+
+      <h4>Dodatno</h4>
+      <p class="accent">
+        Sve vježbe se moraju postaviti na sustav
+        <a target="_blank" href="https://ferko.fer.hr/ferko/">ferko</a>
+        najkasnije do ponedjeljka, 06.06.2022. do 15 sati.
+      </p>
+      <p>
+        Studenti koji su ranijih godina odradili laboratorijske vježbe, ali nisu
+        položili predmet, moraju odraditi i ovogodišnje laboratorijske vježbe.
+      </p>
+      <p>
+        Žalbe su moguće tek na kraju semestra kad su objavljeni ukupni
+        rezultati.
+      </p>
+    </section>
+
+    <section class="sadrzaj-vjezbi-sec">
+      <hr />
+
+      <h3>Sadržaj vježbi</h3>
+
+      <ul>
+        <br />
+
+        <li>
+          <strong>Prvi labos:</strong> <span class="accent">Signali</span> (4
+          boda)
+        </li>
+        <ul>
+          <li>
+            Materijali:
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 01 - Priprema i zadatak (Signali).pdf"
+              >Priprema i zadatak</a
+            >,
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 01 - Pitanja.pdf"
+              >Primjeri pitanja</a
+            >
+          </li>
+          <li>
+            Predloženo ime datoteka:
+            <em><span class="accent">signali</span>.ekst</em>,
+            <em>vjezba_1<span class="accent">.zip</span></em>
+          </li>
+        </ul>
+
+        <br />
+
+        <li>
+          <strong>Drugi labos:</strong>
+          <span class="accent">Višezadaćni rad</span> (4 boda)
+        </li>
+        <ul>
+          <li>
+            Materijali:
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 02 - Priprema (Višezadaćni rad).pdf"
+              >Priprema</a
+            >,
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 02 - Zadatak.pdf"
+              >Zadatak</a
+            >,
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 02 - Pitanja.pdf"
+              >Primjeri pitanja</a
+            >
+          </li>
+          <li>
+            Predloženo ime datoteka:
+            <em><span class="accent">radno_cekanje</span>.ekst</em>,
+            <em>vjezba_2<span class="accent">.zip</span></em>
+          </li>
+        </ul>
+
+        <br />
+
+        <li>
+          <strong>Treći labos:</strong>
+          <span class="accent">Sinkronizacijski mehanizmi</span> (4+4 boda)
+        </li>
+        <ul>
+          <li>
+            Materijali:
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 03 - Priprema (Sinkronizacijski mehanizmi).pdf"
+              >Priprema</a
+            >,
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 03 - Zadaci (Sinkronizacijski mehanizmi).pdf"
+              >Zadatak</a
+            >,
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 03 - Pitanja.pdf"
+              >Primjeri pitanja</a
+            >
+          </li>
+          <li>
+            Predloženo ime datoteka: a)
+            <em><span class="accent">vrtuljak</span>.ekst</em>, b)
+            <em><span class="accent">programeri</span>.ekst</em>,
+            <em>vjezba_3<span class="accent">.zip</span></em>
+          </li>
+        </ul>
+
+        <br />
+
+        <li>
+          <strong>Četvrti labos:</strong>
+          <span class="accent"
+            >Raspoređivanje radnog spremnika straničenjem</span
+          >
+          (6 bodova) - <span class="accent">OPCIONALNO</span>
+        </li>
+        <ul>
+          <li>
+            Materijali:
+            <a
+              target="_blank"
+              href="files/OS - Laboratorijska vježba - 04 - Priprema i zadatak (Straničenje).pdf"
+              >Priprema i zadatak</a
+            >
+          </li>
+          <li>
+            Predloženo ime datoteka:
+            <em><span class="accent">stranicenje</span>.ekst</em>,
+            <em>vjezba_4<span class="accent">.zip</span></em>
+          </li>
+        </ul>
+
+        <br />
+      </ul>
+
+      <p>
+        <span class="accent">Ime datoteka nije važno</span>, ali se preporuča
+        korištenje predloženih imena gdje ekstenzija <em>(.ekst)</em> ovisi o
+        programskom jeziku pa će se tako datoteka, ako je zadatak rješavan u
+        programskom jeziku <em>C</em>, zvati <em>imeDatoteke.c</em>.
+      </p>
+    </section>
+
+    <section class="poveznice-sec">
+      <hr />
+
+      <h3>Korisni programi i poveznice</h3>
+
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/os/pripreme/upute/unix.html"
+          >
+            Kratke upute za rad u UNIX/Linux okruženju</a
+          >,
+          <a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/os/pripreme/upute/pip.html"
+            >prevođenje i pokretanje</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="http://www.fer.hr/rasip/knjiznica/unix1"
+            >UNIX i kako ga koristiti</a
+          >
+          (knjiga)
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/apr/c++1.html"
+            >Auditorne vježbe - turbo uvod u C++</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/apr/c++2.html"
+            >Auditorne vježbe - nastavak C++</a
+          >
+        </li>
+        <li>
+          Knjiga
+          <a target="_blank" href="http://www.bruceeckel.com/"
+            >Bruce Eckel's "Thinking in C++" 2nd Edition</a
+          >
+          (<a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/os1/book/index.html"
+            >lokalno u html formatu</a
+          >)
+        </li>
+        <li>
+          <a target="_blank" href="http://www.zemris.fer.hr/predmeti/os/win32"
+            >Neki programčići za Win32 okruženje (slični zadacima s labosa)</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/os/pripreme/upute/misc/sinkro.html"
+            >Sinkronizacijski problemi (rješenja i komentari)</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="http://www.unix.org/2008edition/"
+            >Upute za razne POSIX (i ostale UNIX) funkcije</a
+          >
+        </li>
+
+        <br />
+      </ul>
+
+      <h4>Predaja labosa na udaljenom računalu</h4>
+
+      <ul>
+        <li>
+          <a target="_blank" href="http://www.putty.nl/latest/x86/putty.exe"
+            >PuTTY</a
+          >
+          (<a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/os/utils/putty.exe"
+            >lokalno</a
+          >)
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="http://winscp.sourceforge.net/eng/download.php"
+            >WinSCP</a
+          >
+          (standalone application) (<a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/os/utils/WinSCP.exe"
+            >lokalno</a
+          >)
+        </li>
+      </ul>
+
+      <h4>Linux na računalu s instaliranim MS Windows operacijskim sustavom</h4>
+
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="https://docs.microsoft.com/en-us/windows/wsl/install-win10"
+          >
+            Linux (npr. Ubuntu) u okviru operacijskog sustava MS Windows 10</a
+          >
+          (još bolje upute možete naći
+          <a
+            target="_blank"
+            href="https://www.windowscentral.com/install-windows-subsystem-linux-windows-10"
+            >ovdje</a
+          >),
+          <a
+            target="_blank"
+            href="http://www.zemris.fer.hr/predmeti/os/pripreme/upute/Ubuntu_win_10.htm"
+            >vrlo kratke upute za instalaciju i pokretanje</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="http://www.ubuntu.com/download/desktop/windows-installer"
+            >Wubi</a
+          >
+          - jednostavna instalacija i deinstalacija linux operacijskog sustava
+          Ubuntu u MS Windows XP, Vista ili 7 okruženju
+        </li>
+      </ul>
+
+      <h4>
+        Izrada labosa kod kuće na vlastitom PC računalu i predaja labosa na PC
+        računalima na Fakultetu koristeći sliku virtualnog stroja (nije više
+        aktualno)
+      </h4>
+
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="http://www.vmware.com/products/player/playerpro-evaluation.html"
+            >VMware Player</a
+          >
+          (<a
+            target="_blank"
+            href="http://www.zemris.fer.hr/~leonardo/os/vmware/"
+            >primjer instalacije</a
+          >)
+        </li>
+        <li>
+          <a target="_blank" href="https://www.virtualbox.org/">VirtualBox</a>
+        </li>
+        <li>Pripremljena slika na USB prijenosnom spremniku (za VirtualBox)</li>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="http://www.virtualbox.org/manual/ch01.html#gui-createvm"
+              >Upute kako stvoriti virtualni stroj</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="http://xubuntu.org/getxubuntu/">xubuntu</a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="http://www.virtualbox.org/manual/ch01.html#ovf"
+            >
+              Upute kako uvesti/izvesti virtualni stroj primjerice na USB
+              prijenosni spremnik</a
+            >
+          </li>
+        </ul>
+      </ul>
+    </section>
+
+    <section class="konzultacije-sec">
+      <hr />
+
+      <h3>Konzultacije</h3>
+
+      <p>
+        Sve pitanja u vezi laboratorijskih vježbi poslati na adresu
+        <a href="mailto:os@zemris.fer.hr">os@zemris.fer.hr</a>.
+      </p>
+
+      <div class="table-container">
+        <table class="predavaci-table" cellpadding="6">
+          <thead>
+            <tr>
+              <th>Grupa</th>
+              <th>Predavač</th>
+              <th>E-mail</th>
+              <th>Prostorija</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="td-center-text">PA05</td>
+              <td class="td-center-text">
+                <a target="_blank" href="https://www.fer.unizg.hr/marin.golub"
+                  >Marin Golub</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:marin.golub@fer.hr">marin.golub@fer.hr</a>
+              </td>
+              <td class="td-center-text">D316</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">PA02</td>
+              <td class="td-center-text">
+                <a target="_blank" href="http://www.zemris.fer.hr/~leonardo/os/"
+                  >Leonardo Jelenković</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:leonardo.jelenkovic@fer.hr"
+                  >leonardo.jelenkovic@fer.hr</a
+                >
+              </td>
+              <td class="td-center-text">D342</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">PA03</td>
+              <td class="td-center-text">
+                <a
+                  target="_blank"
+                  href="https://www.fer.unizg.hr/marko.djurasevic"
+                  >Marko Đurasević</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:marko.durasevic@fer.hr"
+                  >marko.durasevic@fer.hr</a
+                >
+              </td>
+              <td class="td-center-text">D338</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">PA04</td>
+              <td class="td-center-text">
+                <a target="_blank" href="https://www.fer.unizg.hr/marko.cupic"
+                  >Marko Ćupić</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:marko.cupic@fer.hr">marko.cupic@fer.hr</a>
+              </td>
+              <td class="td-center-text">D340</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <table class="asistenti-table" cellpadding="6">
+          <thead>
+            <tr>
+              <th>Asistent</th>
+              <th>E-mail</th>
+              <th>Prostorija</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="td-center-text">
+                <a target="_blank" href="https://www.fer.unizg.hr/ivan.grubisic"
+                  >Ivan Grubišić</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:ivan.grubisic@fer.hr">ivan.grubisic@fer.hr</a>
+              </td>
+              <td class="td-center-text">D307</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">
+                <a target="_blank" href="https://www.fer.unizg.hr/marko.barisic"
+                  >Marko Barišić</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:marko.barisic@fer.hr">marko.barisic@fer.hr</a>
+              </td>
+              <td class="td-center-text">D336</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">
+                <a target="_blank" href="https://www.fer.unizg.hr/vjeko.kuzina"
+                  >Vjeko Kužina</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:vjeko.kuzina@fer.hr">vjeko.kuzina@fer.hr</a>
+              </td>
+              <td class="td-center-text">D336</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">
+                <a
+                  target="_blank"
+                  href="https://www.fer.unizg.hr/antonio.mocinic"
+                  >Antonio Močinić</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:antonio.mocinic@fer.hr"
+                  >antonio.mocinic@fer.hr</a
+                >
+              </td>
+              <td class="td-center-text">D347</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">
+                <a
+                  target="_blank"
+                  href="https://www.fer.unizg.hr/bojan.novkovic"
+                  >Bojan Novković</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:bojan.novkovic@fer.hr">bojan.novkovic@fer.hr</a>
+              </td>
+              <td class="td-center-text">D347</td>
+            </tr>
+            <tr>
+              <td class="td-center-text">
+                <a target="_blank" href="https://www.fer.unizg.hr/mihael.jaksic"
+                  >Mihael Jakšić</a
+                >
+              </td>
+              <td class="td-center-text">
+                <a href="mailto:mihael.jaksic@fer.hr">mihael.jaksic@fer.hr</a>
+              </td>
+              <td class="td-center-text">C02-16</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Termin konzultacija sa asistentom ili nastavnikom se dogovara mailom na
+        e-mail adresu <em class="accent">ime.prezime@fer.hr</em>.
+      </p>
+    </section>
+
+    <footer class="footer-info">
+      <p>
+        &copy;
+        <a
+          target="_blank"
+          class="footer-info__link"
+          href="https://www.fer.unizg.hr/o_fakultetu/ustroj/zavodi/zavod_za_elektroniku_mikroelektroniku_racunalne_i_inteligentne_sustave"
+          >FER</a
+        >
+        | Brought to you with 💖 by ZEMRIS & JJ
+      </p>
+      <a class="fer-logo" href="https://www.fer.unizg.hr/" target="_blank"
+        ><img src="img/FER_logo.png" alt="FER logo"
+      /></a>
+      <p>Zadnja promjena: <time datetime="2022-04-07">07.04.2022.</time></p>
+    </footer>
+  </body>
+</html>
